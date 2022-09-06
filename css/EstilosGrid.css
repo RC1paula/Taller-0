@@ -1,0 +1,451 @@
+:root{
+    --azulclaro: #48D6ED;
+    --azuloscuro: #337AB7;
+    --azulnegro: #303342;
+    --negro: #333333;
+    --negro2: #000;
+    --gris: #B2B3B3;
+    --fondo: #FFFEFC;
+    --verdeazul: #157A8A;
+    --Magenta: #9C2759;
+    --blanco: #fff;
+    --degradado: linear-gradient(45deg, #337AB7, #0b3860);
+   }
+   
+   body{
+       font-family: 'Roboto', sans-serif;
+       font-size: 16px;
+   }
+   
+   h1,h2,h3,h4,h5{
+     font-family: 'Marcellus', serif;
+   }
+
+#container-grid{
+    display: grid;
+    grid-template: 
+     "header" 100px
+     "navbar" 50px
+     "main" auto
+     "sidebar" 100px
+     "footer" 50px;
+     text-align: center;
+}
+
+
+
+
+#container-grid{
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "bienvenida"
+    "info" 
+    "features"
+    "ubi"
+    "opi"
+    "footer";
+}
+
+nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-areas:
+        'logo'
+        'menu';
+    font-family: 'Marcellus', serif;
+    font-size: 1.3em;
+}
+.logo {
+    grid-area: logo;
+    display: grid;
+    grid-template-areas:
+        '1fr menu-bars';
+    background-color: var(--negro2);
+    padding: 1rem;
+}
+
+.logo img {
+    justify-self: start;
+    width: 50%;
+    max-width: 180px;
+}
+.logo i {
+    grid-area: menu-bars;
+    justify-self: end;
+    color: var(--blanco);
+    font-size: 2rem;
+}
+.menu {
+    grid-area: menu;
+    display: grid;
+    background-color: rgba(1, 10, 52, 0.838);
+}
+
+.menu-hr {
+    width: 90%;
+    background-color: var(--blanco);
+    justify-self: center; 
+}
+ 
+.item {
+    padding: 1rem 0;
+}
+ 
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: center;
+}
+ 
+nav a:hover {
+    background-color: #0B3860;
+    width: 100%;
+}
+ 
+.navbar-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    padding: 0.5rem;
+    font-family: 'Marcellus', serif;
+    color: var(--blanco);
+}
+
+
+/*Bienvenido*/
+#banner {
+    background-image: url('../img/slide1.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 72%;
+    min-height: 400px;
+    margin-top: 60px;
+}
+.texto{
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    padding: 3%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.descripcion{
+    padding: 10%;
+    font-size: 1.2em;
+}
+
+#features{
+    background: url('../img/bg-features.png');
+    color: white;
+    padding-top: 1rem;
+}
+ 
+.features-title{
+    background-color: rgba(0,0,0,0.35);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.5em;
+}
+.features-description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.feature{
+    width: 25%;
+    min-width: 180px;
+    max-width: 230px;
+    margin: 0.8rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+ 
+.feature i{
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+}
+
+.feature-blue{
+    background-color: #00325eae;
+}
+ 
+.feature-black{
+    background-color: rgba(0,0,0,0.59);
+}
+#ubicacion {
+    width: 100%;
+    margin: 2% 0%;
+    text-align: center;
+    object-fit: contain;
+
+  }
+  iframe{
+    margin: 2% 0%;
+  }
+  
+  #ubicacion h1 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 2.5em;
+    font-family: "Marcellus", serif;
+  }
+  .dirreccion {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+.usuarios{
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+}
+
+.box{
+    color: white;
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+.icon{
+    color: white;
+    display: inline-block;
+}
+.opinionimg{
+    width: 30%;
+    height: 30%;
+    border-radius: 100%;
+    float: left;
+
+}
+.nombre{
+    width: 65%;
+    float: right;
+    text-align: left;
+
+}
+
+.estrellas{
+    color: white;
+}
+
+
+
+
+@media screen and (min-width:1024px) {
+    #container-grid{
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "banner"
+        "descripcion" 
+        "feature"
+        "ubicacion"
+        "opinion"
+        "footer";
+    }
+
+    nav{
+        display: grid;
+        grid-template-areas:"logo menu";
+        background-color: var(--negro2);
+    }
+    .logo{
+        grid-area: logo;
+    }
+    .logo i{
+        display: none;
+    }
+    .menu{
+        background-color: transparent;
+        grid-area: menu;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-content: center;
+    }
+    .item {
+        padding: 0.5rem 0;
+    }
+    .menu-hr{
+        display: none;
+    }
+    nav a:hover {
+        border-radius: 5px;
+    }
+
+    .navbar-button {
+        background:#0B3860;
+        border: none;
+        border-radius: 3px;
+
+    }
+    .navbar-button:hover {
+        background:#3f4244;
+        border: none;
+        border-radius: 3px;
+    }
+    .descripcion{
+        display: grid;
+        grid-template-columns: 60% 35%;
+        grid-gap: 100px;
+        padding: 5%;
+        font-size: 1.4em;
+    }
+    .imagen2{
+        width: 60%;
+        height: 70%;
+    } 
+}
+
+@media screen and (min-width:1308px) {
+    body{
+        background-color: #EAEAEA;
+    }
+    #container-grid{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    nav{
+        width: 100%;
+        max-width: 1300px;
+    }
+    hr{
+        display: none;
+       }
+       .texto{
+        margin-top: 20%;
+      }    
+    .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10%;
+        padding: 4% 4%;
+        justify-content: space-around;
+        }
+        .cajas{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 25% 25% 25%;
+            grid-gap: 8%;
+            margin: 0px 2% 0px 5%;
+            font-size: 1.1em;
+        }  
+        .caja{
+            margin-top: -35%;
+            margin-bottom: 22%;
+            padding: 5%;
+            background: linear-gradient(94.54deg, #1d71bb 2.89%, #0d3f6c 80.34%);
+            color: white;
+            font-family: sans-serif ;
+            
+            
+        }
+        
+         .puntos{
+            display: none;
+         }
+}
+
+@media screen and (max-width:768px) {
+    .logo i {
+        text-align: right;
+        color: #fff;
+        font-size: 2em;
+        display: grid;
+      }
+      .menu {
+        width: 100%;
+        margin: 0;
+        transition: all 0.5s;
+        transform: scale(0);
+        display: none;
+        z-index: 3;
+      }
+      
+      .show-menu {
+        transform: scale(1);
+        display: flex;
+        transition: all 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #0b3860;
+      }
+    
+      .texto{
+        margin-top: 60%;
+      }
+      .imagen2{
+        display: none;
+      }
+      
+      .box{
+        padding: 4%;
+      }
+      .opinionimg{
+        width: 25%;
+        height: 25%;
+      }
+      ul li {
+        list-style: none inside;
+      }
+      .carrusel{
+       
+width: 100%;
+
+      }
+      .carrusel .cajas{
+     width: 300%;
+     margin-top: -26%;
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: space-around;
+     align-items: center;
+     transition:  all .5s case;
+     transform:  translateX(-100%);
+      }
+      .carrusel .caja{
+        width: calc( 70% / 3 - 3em);
+        height: 20%;
+        color: white;
+        transition: all 0.4s ease;
+        border-radius: 1px;
+        background: linear-gradient(94.54deg, #2875b9 2.89%, #0d3f6c 80.34%);
+       padding: 2%;
+       font-family: sans-serif;
+      }
+.carrusel .puntos{ 
+width: 100%;
+padding: 2em;
+display: grid;
+grid-template-columns: 15% 15% 15%;
+grid-template-rows: 10%;
+align-items: center;
+justify-content: center;
+
+}
+.carrusel .punto{
+width: 3em;
+height: 0.5em;
+background-color: rgb(55, 56, 56);
+margin: 1em;
+}
+.carrusel .punto.activo{
+    background-color: rgb(27, 27, 27);
+}
+}
+
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/Estilos.css" />
+  </head>
+  <body class="registro">
+    <div class="contenedor">
+      <div class="bienvenido">
+        <div class="wel">
+          <img src="../img/Hotelia horizontal blanco.svg" alt="" style="width: 80%"/>
+          <h1>Eres Más que <br> bienvenido</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="form">
+          <h1>Registrate</h1>
+          <form class="datos">
+            <div>
+              <label>Tipo de documento</label>
+              <br>
+              <select>
+                <option>C.C</option>
+                <option>T.I</option>
+                <option>C.E</option>
+                <option>Pasaporte</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div>
+              <label>N° de Documento</label>
+              <br>
+              <input type="text"/>
+            </div>
+            <div>
+              <label>Nombre</label>
+              <br>
+              <input type="text"/>
+            </div>
+            <div>
+              <label>Apellido</label>
+              <br>
+              <input type="text"/>
+            </div>
+            <div>
+              <label>Fecha de Nacimiento</label>
+              <br>
+              <input type="date"/>
+            </div>
+            <div>
+              
+              <label>Género</label><br>
+            <input class="opcion" type="radio" name="mujer" />M
+            <input class="opcion" type="radio" name="hombre" />F
+            <input class="opcion" type="radio" name="otro" />Otro
+            </div>
+            <div>
+              <label>Correo Electrónico</label>
+              <br>
+              <input type="text" name="" id="" />
+            </div>
+            <div>
+              <label>Teléfono</label>
+              <br>
+              <input type="text"/>
+            </div>
+            <div>
+              <label>País de Origen</label><br />
+              <select>
+                <option>Colombia</option>
+                <option>Argentina</option>
+                <option>Bolivia</option>
+                <option>Ecuador</option>
+                <option>Canada</option>
+              </select>
+            </div>
+            <div>
+              <label>Fotografia</label>
+              <br>
+              <input type="file"/>
+            </div>
+            <div>
+              <label>Contraseña</label>
+              <br>
+              <input type="password"/>
+            </div>
+            <div>
+              <label>Confirmar Contraseña</label>
+              <br>
+              <input type="password"/>
+            </div>
+            <div class="cont">
+              <p>
+                <input  type="checkbox" name="terminos" value=""/><a href="#" class="terminos" > Terminos y condiciones</a>
+              </p>
+              <a href="../pages/Dashboard.html" class="ingresar">ingresar</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <section class="modal">
+        <div class="contenedor-modal">
+          <div class="arrib">
+            <h1 class="titulo-modal">terminos y condiciones</h1>
+          </div>
+          <p class="temycon">
+            Estos terminos de servicio reflejan la forma
+            de trabajar de google como empresa, las
+            leyes por las que nos regimos y determinados 
+            aspectos que siempren hemos creido que son
+            ciertos. Por ello, estos terminos de servicios a
+            yudan a definir la relacionque tiene Google
+            contigo cunado interatuas con nuestros
+            servicios. Por ejemplo estos terminoos
+            incluyen las siguientes seccione:
+            Que puedes esperar de nosotros,donde se  
+            describecomo proporcionamos yudandesarrollamos nuestros servicio,
+            Loque esperamos de ti, donde se establecen 
+            ciertas reglas para utlizar nuestros servicios. 
+          </p>
+        <a class="cerrar.modal">Aceptar</a>
+        </div>
+
+
+    </section>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
